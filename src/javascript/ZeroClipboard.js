@@ -1,9 +1,8 @@
-// Simple Set Clipboard System
-// Author: Joseph Huckaby
+// Copyright 2012, James M. Greene <james.m.greene@gmail.com>
 
 window.ZeroClipboard = {
 
-  version: "1.0.8",
+  version: "1.1.0",
   clients: {}, // registered upload clients on page, indexed by id
   moviePath: 'ZeroClipboard.swf', // URL to movie
   nextId: 1, // ID of next movie
