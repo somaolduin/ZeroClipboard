@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application
+    xmlns:mx="http://www.adobe.com/2006/mxml"
+    creationComplete="runMe()"
+    xmlns:adobe="http://www.adobe.com/2009/flexUnitUIRunner"
+    >
+    <mx:Script>
+        <![CDATA[
+            import org.flexunit.runner.FlexUnitCore;
+            import org.flexunit.internals.TextListener;
+            import org.flexunit.Assert;
+            import mx.logging.LogEventLevel;
+            import flash.system.System;
+            import ZeroClipboard;
+
+            private var core:FlexUnitCore;
+            private var clipboard:ZeroClipboard
+
+            public function runMe():void {
+                core = new FlexUnitCore();
+                core.addListener( TextListener.getDefaultTextListener( LogEventLevel.DEBUG ) );
+                //core.run( clipboard.setSize(10, 10) );
+                var x:int = 5 + 3;
+                Assert.assertEquals( 7, x );
+                System.exit(0);
+            }
+        ]]>
+    </mx:Script>
+</mx:Application>
