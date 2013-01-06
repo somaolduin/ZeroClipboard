@@ -1,7 +1,7 @@
 # set a environment variable to override this to your location. export SWF_COMPILER = /My/Location/bin/mxmlc
 SWF_COMPILER ?= /Applications/Adobe\ Flash\ Builder\ 4.7/sdks/4.6.0/bin/mxmlc -static-link-runtime-shared-libraries=true -source-path=./src/flash
 SWC_COMPILER = /Applications/Adobe\ Flash\ Builder\ 4.7/sdks/4.6.0/bin/compc -compiler.source-path=./src/flash -output=./src/flash/ZeroClipboard.swc -include-classes=ZeroClipboard
-SWF_TEST = /Applications/Adobe\ Flash\ Builder\ 4.7/sdks/4.6.0/bin/mxmlc -static-link-runtime-shared-libraries=true -include-libraries=./test/flexunit-4.1.0_RC2-4-flex_4.1.0.16076.swc
+SWF_TEST = /Applications/Adobe\ Flash\ Builder\ 4.7/sdks/4.6.0/bin/mxmlc -static-link-runtime-shared-libraries=true -include-libraries=./test/flexunit-4.1.0_RC2-4-flex_4.1.0.16076.swc,./src/flash/ZeroClipboard.swc ./test/runtest.mxml
 
 NODE_PATH ?= ./node_modules
 JS_COMPILER = $(NODE_PATH)/uglify-js/bin/uglifyjs
